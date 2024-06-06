@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\werci\source\repos\Projekt_4\tp_projekt_4\build\_deps\eigen-subbuild\CMakeFiles\0380808fb876cb23a5b46b0c0d58a95b\eigen-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\werci\source\repos\Projekt_4\tp_projekt_4\build\_deps\eigen-subbuild\CMakeFiles\0380808fb876cb23a5b46b0c0d58a95b\eigen-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\werci\source\repos\Projekt_4\tp_projekt_4\build\_deps\eigen-subbuild\CMakeFiles\0380808fb876cb23a5b46b0c0d58a95b\eigen-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\werci\source\repos\Projekt_4\tp_projekt_4\build\_deps\eigen-subbuild\CMakeFiles\0380808fb876cb23a5b46b0c0d58a95b\eigen-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\werci\source\repos\Projekt_4\tp_projekt_4\build\_deps\eigen-subbuild\CMakeFiles\0380808fb876cb23a5b46b0c0d58a95b\eigen-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\werci\source\repos\Projekt_4\tp_projekt_4\build\_deps\eigen-subbuild\CMakeFiles\0380808fb876cb23a5b46b0c0d58a95b\eigen-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\werci\source\repos\Projekt_4\tp_projekt_4\build\_deps\eigen-subbuild\CMakeFiles\0380808fb876cb23a5b46b0c0d58a95b\eigen-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\werci\source\repos\Projekt_4\tp_projekt_4\build\_deps\eigen-subbuild\CMakeFiles\0380808fb876cb23a5b46b0c0d58a95b\eigen-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\werci\source\repos\Projekt_4\tp_projekt_4\build\_deps\eigen-subbuild\CMakeFiles\5ca3358712213e2ff4d99136d55be887\eigen-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\werci\source\repos\Projekt_4\tp_projekt_4\build\_deps\eigen-subbuild\CMakeFiles\6d3f65a2e315d9f85b518d8d6666f085\eigen-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\werci\source\repos\Projekt_4\tp_projekt_4\build\_deps\eigen-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\werci\source\repos\Projekt_4\tp_projekt_4\build\_deps\eigen-subbuild\CMakeFiles\eigen-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{F2CA154C-C830-36B2-AE2F-C7AE0F635EC8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

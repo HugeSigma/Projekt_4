@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\werci\source\repos\Projekt_4\tp_projekt_4\build\SDL2_gfx\sdl2-subbuild\CMakeFiles\a87b80a72630e7fe2c01535e7270171d\sdl2-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\werci\source\repos\Projekt_4\tp_projekt_4\build\SDL2_gfx\sdl2-subbuild\CMakeFiles\a87b80a72630e7fe2c01535e7270171d\sdl2-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\werci\source\repos\Projekt_4\tp_projekt_4\build\SDL2_gfx\sdl2-subbuild\CMakeFiles\a87b80a72630e7fe2c01535e7270171d\sdl2-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\werci\source\repos\Projekt_4\tp_projekt_4\build\SDL2_gfx\sdl2-subbuild\CMakeFiles\a87b80a72630e7fe2c01535e7270171d\sdl2-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\werci\source\repos\Projekt_4\tp_projekt_4\build\SDL2_gfx\sdl2-subbuild\CMakeFiles\a87b80a72630e7fe2c01535e7270171d\sdl2-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\werci\source\repos\Projekt_4\tp_projekt_4\build\SDL2_gfx\sdl2-subbuild\CMakeFiles\a87b80a72630e7fe2c01535e7270171d\sdl2-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\werci\source\repos\Projekt_4\tp_projekt_4\build\SDL2_gfx\sdl2-subbuild\CMakeFiles\a87b80a72630e7fe2c01535e7270171d\sdl2-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\werci\source\repos\Projekt_4\tp_projekt_4\build\SDL2_gfx\sdl2-subbuild\CMakeFiles\a87b80a72630e7fe2c01535e7270171d\sdl2-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\werci\source\repos\Projekt_4\tp_projekt_4\build\SDL2_gfx\sdl2-subbuild\CMakeFiles\3d0cec2e396f83c5a3b3cfac5b52f28c\sdl2-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\werci\source\repos\Projekt_4\tp_projekt_4\build\SDL2_gfx\sdl2-subbuild\CMakeFiles\582358244f96c230c0963a2e99cc075c\sdl2-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\werci\source\repos\Projekt_4\tp_projekt_4\build\SDL2_gfx\sdl2-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\werci\source\repos\Projekt_4\tp_projekt_4\build\SDL2_gfx\sdl2-subbuild\CMakeFiles\sdl2-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{B69F3429-B3C5-3B18-A9F1-36DF54F97EA9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

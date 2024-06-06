@@ -12,11 +12,20 @@ void PlanarQuadrotorVisualizer::render(std::shared_ptr<SDL_Renderer> &gRenderer)
     Eigen::VectorXf state = quadrotor_ptr->GetState();
     float q_x, q_y, q_theta;
 
+    const int SCREEN_WIDTH = 1280;
+    const int SCREEN_HEIGHT = 720;
+
+
+    //ad.1 dron startuje ze œrodka ekranu; koordynaty %3 = 0 do x, %3 = 1 do y, %3 = 2 do theta
+    state[0] = SCREEN_WIDTH / 2;
+    state[1] = SCREEN_HEIGHT / 2;
+    state[2] = 0;
+
     /* x, y, theta coordinates */
     q_x = state[0];
     q_y = state[1];
     q_theta = state[2];
 
     SDL_SetRenderDrawColor(gRenderer.get(), 0xFF, 0x00, 0x00, 0xFF);
-    filledCircleColor(gRenderer.get(), q_x, q_y, 30, 0xFF0000FF);
+    filledCircleColor(gRenderer.get(), q_x, q_y, 200, 0xFF0000FF);
 }
