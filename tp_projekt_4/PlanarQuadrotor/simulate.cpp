@@ -2,6 +2,9 @@
  * SDL window creation adapted from https://github.com/isJuhn/DoublePendulum
 */
 #include "simulate.h"
+#include "matplot/matplot.h"
+
+namespace mp = matplot;
 
 Eigen::MatrixXf LQR(PlanarQuadrotor &quadrotor, float dt) {
     /* Calculate LQR gain matrix */
@@ -78,12 +81,14 @@ int main(int argc, char* args[])
     std::vector<float> x_history;
     std::vector<float> y_history;
     std::vector<float> theta_history;
+    std::vector<float> time;
 
     if (init(gWindow, gRenderer, SCREEN_WIDTH, SCREEN_HEIGHT) >= 0)
     {
         SDL_Event e;
         bool quit = false;
         float delay;
+        float current_time = 0;
         int x, y;
         Eigen::VectorXf state = Eigen::VectorXf::Zero(6);
 
@@ -108,6 +113,29 @@ int main(int argc, char* args[])
                     quadrotor.SetGoal(goal_state);
                     quadrotor.DoUpdateState(dt);
                 }
+                else if (e.type == SDL_KEYDOWN )
+                {
+                    mp::tiledlayout(3, 1);
+                    auto w1 = mp::nexttile();
+                    mp::plot(w1, time, x_history);
+                    mp::title(w1, "Polozenie w poziomie");
+                    mp::ylabel(w1, "x");
+                    mp::xlabel(w1, "t{s}");
+
+                    auto w2 = mp::nexttile();
+                    mp::plot(w2, time, y_history);
+                    mp::title(w2, "Polozenie w pionie");
+                    mp::ylabel(w2, "y");
+                    mp::xlabel(w2, "t{s}");
+
+                    auto w3 = mp::nexttile();
+                    mp::plot(w3, time, theta_history);
+                    mp::title(w3, "Kat theta w czasie");
+                    mp::ylabel(w3, "theta");
+                    mp::xlabel(w3, "t{s}");
+
+                    mp::show();
+                }
                 
             }
 
@@ -124,6 +152,21 @@ int main(int argc, char* args[])
             /* Simulate quadrotor forward in time */
             control(quadrotor, K);
             quadrotor.Update(dt);
+
+            //dodanie pozycji drona do wektorów
+            x_history.push_back(quadrotor.GetState()[0]);
+            y_history.push_back(quadrotor.GetState()[1]);
+            theta_history.push_back(quadrotor.GetState()[2]);
+            time.push_back(current_time);
+
+            if (time.back() >= 200)
+            {
+                x_history.erase(x_history.begin());
+                y_history.erase(y_history.begin());
+                theta_history.erase(theta_history.begin());
+                time.erase(time.begin());
+            }
+            current_time += dt;
         }
     }
     SDL_Quit();
