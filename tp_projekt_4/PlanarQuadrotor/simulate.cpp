@@ -75,8 +75,8 @@ int main(int argc, char* args[])
 
     /**
      * TODO: Plot x, y, theta over time
-     * 1. Update x, y, theta history vectors to store trajectory of the quadrotor
-     * 2. Plot trajectory using matplot++ when key 'p' is clicked
+     * 1. Update x, y, theta history vectors to store trajectory of the quadrotor - zrobione 7.06
+     * 2. Plot trajectory using matplot++ when key 'p' is clicked  - zrobione 8.06
     */
     std::vector<float> x_history;
     std::vector<float> y_history;
@@ -90,6 +90,9 @@ int main(int argc, char* args[])
         float delay;
         float current_time = 0;
         int x, y;
+        const int max_time = 500;
+
+
         Eigen::VectorXf state = Eigen::VectorXf::Zero(6);
 
         while (!quit)
@@ -113,26 +116,23 @@ int main(int argc, char* args[])
                     quadrotor.SetGoal(goal_state);
                     quadrotor.DoUpdateState(dt);
                 }
-                else if (e.type == SDL_KEYDOWN )
+                else if (e.type == SDL_KEYDOWN && e.key.keysym.sym == SDLK_p)
                 {
                     mp::tiledlayout(3, 1);
                     auto w1 = mp::nexttile();
                     mp::plot(w1, time, x_history);
-                    mp::title(w1, "Polozenie w poziomie");
                     mp::ylabel(w1, "x");
-                    mp::xlabel(w1, "t{s}");
+                    mp::xlabel(w1, "t");
 
                     auto w2 = mp::nexttile();
                     mp::plot(w2, time, y_history);
-                    mp::title(w2, "Polozenie w pionie");
                     mp::ylabel(w2, "y");
-                    mp::xlabel(w2, "t{s}");
+                    mp::xlabel(w2, "t");
 
                     auto w3 = mp::nexttile();
                     mp::plot(w3, time, theta_history);
-                    mp::title(w3, "Kat theta w czasie");
                     mp::ylabel(w3, "theta");
-                    mp::xlabel(w3, "t{s}");
+                    mp::xlabel(w3, "t");
 
                     mp::show();
                 }
@@ -159,7 +159,7 @@ int main(int argc, char* args[])
             theta_history.push_back(quadrotor.GetState()[2]);
             time.push_back(current_time);
 
-            if (time.back() >= 200)
+            if (time.back() >= max_time)
             {
                 x_history.erase(x_history.begin());
                 y_history.erase(y_history.begin());
