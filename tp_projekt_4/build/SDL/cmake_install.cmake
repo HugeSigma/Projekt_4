@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/SDL
+# Install script for directory: C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/SDL
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
