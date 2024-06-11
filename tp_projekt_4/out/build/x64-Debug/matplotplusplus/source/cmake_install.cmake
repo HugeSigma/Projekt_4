@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/matplotplusplus/source
+# Install script for directory: C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/matplotplusplus/source
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/werci/Source/Repos/Projekt_4/tp_projekt_4/out/install/x64-Debug")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/out/install/x64-Debug")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,11 +34,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/out/build/x64-Debug/matplotplusplus/source/3rd_party/cmake_install.cmake")
+  include("C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/out/build/x64-Debug/matplotplusplus/source/3rd_party/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/out/build/x64-Debug/matplotplusplus/source/matplot/cmake_install.cmake")
+  include("C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/out/build/x64-Debug/matplotplusplus/source/matplot/cmake_install.cmake")
 endif()
 

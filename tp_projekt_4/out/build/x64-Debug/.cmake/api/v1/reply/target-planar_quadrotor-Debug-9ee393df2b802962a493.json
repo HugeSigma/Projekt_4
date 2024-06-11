@@ -114,28 +114,28 @@
 			[
 				{
 					"backtrace" : 11,
-					"path" : "C:/Users/werci/source/repos/Projekt_4/tp_projekt_4"
+					"path" : "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/out/build/x64-Debug/SDL/include"
+					"path" : "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/out/build/x64-Debug/SDL/include"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/out/build/x64-Debug/SDL/include-config-debug"
+					"path" : "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/out/build/x64-Debug/SDL/include-config-debug"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/out/build/x64-Debug/SDL2_gfx/SDL-2.24.2/include"
+					"path" : "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/out/build/x64-Debug/SDL2_gfx/SDL-2.24.2/include"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/matplotplusplus/source"
+					"path" : "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/matplotplusplus/source"
 				},
 				{
 					"backtrace" : 3,
 					"isSystem" : true,
-					"path" : "C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/out/build/x64-Debug/_deps/eigen-src"
+					"path" : "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/out/build/x64-Debug/_deps/eigen-src"
 				}
 			],
 			"language" : "CXX",
@@ -161,6 +161,13 @@
 		{
 			"backtrace" : 3,
 			"id" : "SDL2_gfx::@2c7becf580f3cc8d05f2"
+<<<<<<<< HEAD:tp_projekt_4/out/build/x64-Debug/.cmake/api/v1/reply/target-planar_quadrotor-Debug-9ee393df2b802962a493.json
+========
+		},
+		{
+			"backtrace" : 3,
+			"id" : "nodesoup::@c12dc8f6f399c06ad5fb"
+>>>>>>>> 85051e2bd61436d767749ee81ba6205f0ff42eda:tp_projekt_4/out/build/x64-Debug/.cmake/api/v1/reply/target-planar_quadrotor-Debug-13bc99e12a1f23887eae.json
 		},
 		{
 			"backtrace" : 2,
@@ -173,10 +180,13 @@
 		{
 			"backtrace" : 3,
 			"id" : "matplot::@900000785becdfd3715c"
+<<<<<<<< HEAD:tp_projekt_4/out/build/x64-Debug/.cmake/api/v1/reply/target-planar_quadrotor-Debug-9ee393df2b802962a493.json
 		},
 		{
 			"backtrace" : 3,
 			"id" : "nodesoup::@c12dc8f6f399c06ad5fb"
+========
+>>>>>>>> 85051e2bd61436d767749ee81ba6205f0ff42eda:tp_projekt_4/out/build/x64-Debug/.cmake/api/v1/reply/target-planar_quadrotor-Debug-13bc99e12a1f23887eae.json
 		}
 	],
 	"id" : "planar_quadrotor::@6890427a1f51a3e7e1df",

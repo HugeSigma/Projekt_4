@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/werci/source/repos/Projekt_4/tp_projekt_4
+# Install script for directory: C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/werci/Source/Repos/Projekt_4/tp_projekt_4/out/install/x64-Debug")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/out/install/x64-Debug")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,17 +34,17 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/out/build/x64-Debug/matplotplusplus/cmake_install.cmake")
+  include("C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/out/build/x64-Debug/matplotplusplus/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/out/build/x64-Debug/SDL/cmake_install.cmake")
+  include("C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/out/build/x64-Debug/SDL/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/out/build/x64-Debug/SDL2_gfx/cmake_install.cmake")
+  include("C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/out/build/x64-Debug/SDL2_gfx/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -55,5 +55,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/out/build/x64-Debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/out/build/x64-Debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,8 +1,8 @@
-if (NOT EXISTS "C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/out/build/x64-Debug/install_manifest.txt")
-    message(FATAL_ERROR "Cannot find install manifest: \"C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/out/build/x64-Debug/install_manifest.txt\"")
-endif(NOT EXISTS "C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/out/build/x64-Debug/install_manifest.txt")
+if (NOT EXISTS "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/out/build/x64-Debug/install_manifest.txt")
+    message(FATAL_ERROR "Cannot find install manifest: \"C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/out/build/x64-Debug/install_manifest.txt\"")
+endif(NOT EXISTS "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/out/build/x64-Debug/install_manifest.txt")
 
-file(READ "C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/out/build/x64-Debug/install_manifest.txt" files)
+file(READ "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/out/build/x64-Debug/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 foreach (file ${files})
     message(STATUS "Uninstalling \"$ENV{DESTDIR}${file}\"")

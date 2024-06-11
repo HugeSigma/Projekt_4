@@ -4,19 +4,19 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/out/build/x64-Debug/SDL2_gfx/SDL-2.24.2"
-  "C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/out/build/x64-Debug/SDL2_gfx/sdl2-build"
-  "C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/out/build/x64-Debug/SDL2_gfx/sdl2-subbuild/sdl2-populate-prefix"
-  "C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/out/build/x64-Debug/SDL2_gfx/sdl2-subbuild/sdl2-populate-prefix/tmp"
-  "C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/out/build/x64-Debug/SDL2_gfx/sdl2-subbuild/sdl2-populate-prefix/src/sdl2-populate-stamp"
-  "C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/out/build/x64-Debug/SDL2_gfx/sdl2-subbuild/sdl2-populate-prefix/src"
-  "C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/out/build/x64-Debug/SDL2_gfx/sdl2-subbuild/sdl2-populate-prefix/src/sdl2-populate-stamp"
+  "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/out/build/x64-Debug/SDL2_gfx/SDL-2.24.2"
+  "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/out/build/x64-Debug/SDL2_gfx/sdl2-build"
+  "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/out/build/x64-Debug/SDL2_gfx/sdl2-subbuild/sdl2-populate-prefix"
+  "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/out/build/x64-Debug/SDL2_gfx/sdl2-subbuild/sdl2-populate-prefix/tmp"
+  "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/out/build/x64-Debug/SDL2_gfx/sdl2-subbuild/sdl2-populate-prefix/src/sdl2-populate-stamp"
+  "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/out/build/x64-Debug/SDL2_gfx/sdl2-subbuild/sdl2-populate-prefix/src"
+  "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/out/build/x64-Debug/SDL2_gfx/sdl2-subbuild/sdl2-populate-prefix/src/sdl2-populate-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/out/build/x64-Debug/SDL2_gfx/sdl2-subbuild/sdl2-populate-prefix/src/sdl2-populate-stamp/${subDir}")
+    file(MAKE_DIRECTORY "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/out/build/x64-Debug/SDL2_gfx/sdl2-subbuild/sdl2-populate-prefix/src/sdl2-populate-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/out/build/x64-Debug/SDL2_gfx/sdl2-subbuild/sdl2-populate-prefix/src/sdl2-populate-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/out/build/x64-Debug/SDL2_gfx/sdl2-subbuild/sdl2-populate-prefix/src/sdl2-populate-stamp${cfgdir}") # cfgdir has leading slash
 endif()

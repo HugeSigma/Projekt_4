@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Users\werci\source\repos\Projekt_4\tp_projekt_4\build\SDL2_gfx\sdl2-subbuild\CMakeFiles\582358244f96c230c0963a2e99cc075c\generate.stamp.rule">
+    <CustomBuild Include="C:\Users\win10\Desktop\gunk\Projekt_4\tp_projekt_4\build\SDL2_gfx\sdl2-subbuild\CMakeFiles\31b07357b70db8befa32b91a1b1e2394\generate.stamp.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{B69F3429-B3C5-3B18-A9F1-36DF54F97EA9}</UniqueIdentifier>
+      <UniqueIdentifier>{A37379BC-CEAF-33DA-8B1A-3D7EE0B0BA73}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -4,19 +4,19 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/build/_deps/eigen-src"
-  "C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/build/_deps/eigen-build"
-  "C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/build/_deps/eigen-subbuild/eigen-populate-prefix"
-  "C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/build/_deps/eigen-subbuild/eigen-populate-prefix/tmp"
-  "C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp"
-  "C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/build/_deps/eigen-subbuild/eigen-populate-prefix/src"
-  "C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp"
+  "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/build/_deps/eigen-src"
+  "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/build/_deps/eigen-build"
+  "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/build/_deps/eigen-subbuild/eigen-populate-prefix"
+  "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/build/_deps/eigen-subbuild/eigen-populate-prefix/tmp"
+  "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp"
+  "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/build/_deps/eigen-subbuild/eigen-populate-prefix/src"
+  "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp"
 )
 
 set(configSubDirs Debug)
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/${subDir}")
+    file(MAKE_DIRECTORY "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp${cfgdir}") # cfgdir has leading slash
 endif()

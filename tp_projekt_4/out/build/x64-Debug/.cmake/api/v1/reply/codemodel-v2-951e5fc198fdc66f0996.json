@@ -192,56 +192,60 @@
 				{
 					"directoryIndex" : 5,
 					"id" : "SDL2::@e7c329919722962a2ad4",
-					"jsonFile" : "target-SDL2-Debug-ce5d9d69ec340de1d4ad.json",
+					"jsonFile" : "target-SDL2-Debug-a022ad3f300e3c840801.json",
 					"name" : "SDL2",
 					"projectIndex" : 2
 				},
 				{
 					"directoryIndex" : 5,
 					"id" : "SDL2-static::@e7c329919722962a2ad4",
-					"jsonFile" : "target-SDL2-static-Debug-857fb4fe407d48f79abb.json",
+					"jsonFile" : "target-SDL2-static-Debug-5724750a49cca914194c.json",
 					"name" : "SDL2-static",
 					"projectIndex" : 2
 				},
 				{
 					"directoryIndex" : 6,
 					"id" : "SDL2_gfx::@2c7becf580f3cc8d05f2",
-					"jsonFile" : "target-SDL2_gfx-Debug-7ff576060bcfbd783699.json",
+					"jsonFile" : "target-SDL2_gfx-Debug-319fd9ed350ee39b623f.json",
 					"name" : "SDL2_gfx",
 					"projectIndex" : 3
 				},
 				{
 					"directoryIndex" : 5,
 					"id" : "SDL2_test::@e7c329919722962a2ad4",
-					"jsonFile" : "target-SDL2_test-Debug-ff764511fc5e4982a971.json",
+					"jsonFile" : "target-SDL2_test-Debug-3794f2ef77ec224c8e35.json",
 					"name" : "SDL2_test",
 					"projectIndex" : 2
 				},
 				{
 					"directoryIndex" : 5,
 					"id" : "SDL2main::@e7c329919722962a2ad4",
-					"jsonFile" : "target-SDL2main-Debug-7b1f7ac5269712b66524.json",
+					"jsonFile" : "target-SDL2main-Debug-5efba1c704001e6ba829.json",
 					"name" : "SDL2main",
 					"projectIndex" : 2
 				},
 				{
 					"directoryIndex" : 4,
 					"id" : "matplot::@900000785becdfd3715c",
-					"jsonFile" : "target-matplot-Debug-0f390d24d9178ee0869a.json",
+					"jsonFile" : "target-matplot-Debug-31a2f34e7e2f20c7fa52.json",
 					"name" : "matplot",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "nodesoup::@c12dc8f6f399c06ad5fb",
-					"jsonFile" : "target-nodesoup-Debug-eb7f95a4789b9528679d.json",
+					"jsonFile" : "target-nodesoup-Debug-f0a00cc1290b68bddfcb.json",
 					"name" : "nodesoup",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "planar_quadrotor::@6890427a1f51a3e7e1df",
+<<<<<<<< HEAD:tp_projekt_4/out/build/x64-Debug/.cmake/api/v1/reply/codemodel-v2-951e5fc198fdc66f0996.json
 					"jsonFile" : "target-planar_quadrotor-Debug-9ee393df2b802962a493.json",
+========
+					"jsonFile" : "target-planar_quadrotor-Debug-13bc99e12a1f23887eae.json",
+>>>>>>>> 85051e2bd61436d767749ee81ba6205f0ff42eda:tp_projekt_4/out/build/x64-Debug/.cmake/api/v1/reply/codemodel-v2-aa50b3b34d9c2830ce32.json
 					"name" : "planar_quadrotor",
 					"projectIndex" : 0
 				},
@@ -265,12 +269,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/werci/source/repos/Projekt_4/tp_projekt_4/out/build/x64-Debug",
-		"source" : "C:/Users/werci/source/repos/Projekt_4/tp_projekt_4"
+		"build" : "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4/out/build/x64-Debug",
+		"source" : "C:/Users/win10/Desktop/gunk/Projekt_4/tp_projekt_4"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 6
+		"minor" : 5
 	}
 }
