@@ -17,8 +17,6 @@ void PlanarQuadrotorVisualizer::render(std::shared_ptr<SDL_Renderer> &gRenderer)
     q_y = state[1];
     q_theta = state[2];
 
-    SDL_SetRenderDrawColor(gRenderer.get(), 0x80, 0x80, 0x80, 0xFF);
-
     SDL_Rect quadrotorKorpus = {
     quadrotorKorpus.x = q_x - 50, // srodek
     quadrotorKorpus.y = q_y - 20, // srodek
@@ -26,8 +24,31 @@ void PlanarQuadrotorVisualizer::render(std::shared_ptr<SDL_Renderer> &gRenderer)
     quadrotorKorpus.h = 40 // wysokosc
     };
     
+    int Dron_L = quadrotorKorpus.x;
+    int Dron_P = quadrotorKorpus.x + quadrotorKorpus.w;
+    int Dron_G = quadrotorKorpus.y;
+    int Dron_D = quadrotorKorpus.y + quadrotorKorpus.h;
+
+    int x1 = Dron_L; //koordynaty x, y na plaszycznie
+    int x2 = Dron_P;  
+    int y1 = Dron_G;
+    int y2 = Dron_D;
+
+    SDL_SetRenderDrawColor(gRenderer.get(), 0xFF, 0x00, 0x00, 0xFF);
+
     SDL_RenderFillRect(gRenderer.get(), &quadrotorKorpus);
 
+    SDL_SetRenderDrawColor(gRenderer.get(), 0x80, 0x80, 0x80, 0xFF);
+
+    SDL_RenderDrawLine(gRenderer.get(), x1 - 20, y1 + 20, x1 + 20, y1 - 20);
+    SDL_RenderDrawLine(gRenderer.get(), x1 - 20, y1 - 20, x1 + 20, y1 + 20);
+    SDL_RenderDrawLine(gRenderer.get(), x1 - 20, y1 + 21, x1 + 20, y1 - 19);
+    SDL_RenderDrawLine(gRenderer.get(), x1 - 20, y1 - 19, x1 + 20, y1 + 21);
+
+    SDL_RenderDrawLine(gRenderer.get(), x2 - 20, y1 - 20, x2 + 20, y1 + 20);
+    SDL_RenderDrawLine(gRenderer.get(), x2 - 20, y1 + 20, x2 + 20, y1 - 20);
+    SDL_RenderDrawLine(gRenderer.get(), x2 - 20, y1 - 19, x2 + 20, y1 + 21);
+    SDL_RenderDrawLine(gRenderer.get(), x2 - 20, y1 + 21, x2 + 20, y1 - 19);
+
     SDL_RenderPresent(gRenderer.get());
-    
 }
