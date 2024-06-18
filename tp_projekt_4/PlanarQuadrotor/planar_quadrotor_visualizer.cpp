@@ -17,6 +17,11 @@ void PlanarQuadrotorVisualizer::render(std::shared_ptr<SDL_Renderer> &gRenderer)
     q_y = state[1];
     q_theta = state[2];
 
+    static int animacja = 0;
+    if (animacja == 100) {
+        animacja = 0;
+    }
+
     SDL_Rect quadrotorKorpus = {
     quadrotorKorpus.x = q_x - 50, // srodek
     quadrotorKorpus.y = q_y - 20, // srodek
@@ -40,15 +45,33 @@ void PlanarQuadrotorVisualizer::render(std::shared_ptr<SDL_Renderer> &gRenderer)
 
     SDL_SetRenderDrawColor(gRenderer.get(), 0x80, 0x80, 0x80, 0xFF);
 
-    SDL_RenderDrawLine(gRenderer.get(), x1 - 20, y1 + 20, x1 + 20, y1 - 20);
-    SDL_RenderDrawLine(gRenderer.get(), x1 - 20, y1 - 20, x1 + 20, y1 + 20);
-    SDL_RenderDrawLine(gRenderer.get(), x1 - 20, y1 + 21, x1 + 20, y1 - 19);
-    SDL_RenderDrawLine(gRenderer.get(), x1 - 20, y1 - 19, x1 + 20, y1 + 21);
+    SDL_RenderDrawLine(gRenderer.get(), x1, y1, x1, y1 - 20);
+    SDL_RenderDrawLine(gRenderer.get(), x2, y1, x2, y1 - 20);
+    if(animacja % 2 == 0){
+        SDL_RenderDrawLine(gRenderer.get(), x1 - 20, y1 + 0, x1 + 20, y1 - 40);
+        SDL_RenderDrawLine(gRenderer.get(), x1 - 20, y1 - 40, x1 + 20, y1 + 0);
+        SDL_RenderDrawLine(gRenderer.get(), x1 - 20, y1 + 1, x1 + 20, y1 - 39);
+        SDL_RenderDrawLine(gRenderer.get(), x1 - 20, y1 - 39, x1 + 20, y1 + 1);
 
-    SDL_RenderDrawLine(gRenderer.get(), x2 - 20, y1 - 20, x2 + 20, y1 + 20);
-    SDL_RenderDrawLine(gRenderer.get(), x2 - 20, y1 + 20, x2 + 20, y1 - 20);
-    SDL_RenderDrawLine(gRenderer.get(), x2 - 20, y1 - 19, x2 + 20, y1 + 21);
-    SDL_RenderDrawLine(gRenderer.get(), x2 - 20, y1 + 21, x2 + 20, y1 - 19);
+        SDL_RenderDrawLine(gRenderer.get(), x2 - 20, y1 - 40, x2 + 20, y1 + 0);
+        SDL_RenderDrawLine(gRenderer.get(), x2 - 20, y1 + 0, x2 + 20, y1 - 40);
+        SDL_RenderDrawLine(gRenderer.get(), x2 - 20, y1 - 39, x2 + 20, y1 + 1);
+        SDL_RenderDrawLine(gRenderer.get(), x2 - 20, y1 + 1, x2 + 20, y1 - 39); 
+    }
+
+    if (animacja % 2 == 1){
+        SDL_RenderDrawLine(gRenderer.get(), x1 - 20, y1 - 20, x1 + 20, y1 - 20);
+        SDL_RenderDrawLine(gRenderer.get(), x1 - 20, y1 - 21, x1 + 20, y1 - 21);
+        SDL_RenderDrawLine(gRenderer.get(), x1, y1, x1, y1 - 40);
+        SDL_RenderDrawLine(gRenderer.get(), x1, y1 - 1, x1, y1 - 41);
+
+        SDL_RenderDrawLine(gRenderer.get(), x2 - 20, y1 - 20, x2 + 20, y1 - 20);
+        SDL_RenderDrawLine(gRenderer.get(), x2 - 20, y1 - 21, x2 + 20, y1 - 21);
+        SDL_RenderDrawLine(gRenderer.get(), x2, y1, x2, y1 - 40);
+        SDL_RenderDrawLine(gRenderer.get(), x2, y1 - 1, x2, y1 - 41);
+    }
+
 
     SDL_RenderPresent(gRenderer.get());
+    animacja++;
 }
