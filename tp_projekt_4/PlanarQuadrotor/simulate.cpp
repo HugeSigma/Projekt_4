@@ -3,8 +3,28 @@
 */
 #include "simulate.h"
 #include "matplot/matplot.h"
+#include "SDL.h"
 
 namespace mp = matplot;
+
+const int base_freq = 44100;
+const int chunk_size = 1024;
+const int wzmocnienie = 1;
+
+//dzwiek
+void dzwiek(Uint8* bufor, double freq_dzwieku, double theta)
+{
+    double time;
+    double current_value;
+
+    for (int i = 0; i < chunk_size; i++)
+    {
+        time = i / base_freq;
+        current_value = wzmocnienie * sin(time* 2 * M_PI * freq_dzwieku);
+
+        bufor[i] = (Uint8)(current_value + wzmocnienie * 2 + theta * 2 * wzmocnienie); //theta
+    }
+}
 
 Eigen::MatrixXf LQR(PlanarQuadrotor &quadrotor, float dt) {
     /* Calculate LQR gain matrix */
@@ -43,6 +63,28 @@ int main(int argc, char* args[])
 
     int mid_width = SCREEN_WIDTH / 2;
     int mid_height = SCREEN_HEIGHT / 2;
+    
+    if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) < 0) {
+        std::cerr << "Blad inicjalizacji SDL: " << SDL_GetError() << std::endl;
+        return -1;
+    }
+
+    SDL_AudioSpec specyfikacja;
+    specyfikacja.freq = 54100;
+    specyfikacja.format = AUDIO_U8;
+    specyfikacja.channels = 2;
+    specyfikacja.samples = chunk_size;
+    specyfikacja.callback = NULL;
+    specyfikacja.userdata = NULL;
+
+    double freq_dzwieku = 100;
+
+    SDL_AudioDeviceID urzadzenie_dzwiekowe = SDL_OpenAudioDevice(NULL, 0, &specyfikacja, NULL, 0);
+    if (urzadzenie_dzwiekowe == 0) {
+        std::cerr << "Blad urzadzenia audio: " << SDL_GetError() << std::endl;
+        SDL_Quit();
+        return -1;
+    }
 
     /**
      * TODO: Extend simulation
@@ -50,6 +92,7 @@ int main(int argc, char* args[])
      *    [x, y, 0, 0, 0, 0] - zrobione 7.06
      * 2. Update PlanarQuadrotor from simulation when goal is changed - zrobione 7.06
     */
+
     Eigen::VectorXf initial_state = Eigen::VectorXf::Zero(6);
 
     initial_state[0] = mid_width;
@@ -167,8 +210,15 @@ int main(int argc, char* args[])
                 time.erase(time.begin());
             }
             current_time += dt;
+
+            Uint8* bufor_dzwieku = new Uint8[specyfikacja.samples];
+            dzwiek(bufor_dzwieku, freq_dzwieku, quadrotor.GetState()[2]);
+            SDL_QueueAudio(urzadzenie_dzwiekowe, bufor_dzwieku, specyfikacja.samples);
+            SDL_PauseAudioDevice(urzadzenie_dzwiekowe, 0);
+            delete[] bufor_dzwieku;
         }
     }
+    SDL_CloseAudioDevice(urzadzenie_dzwiekowe);
     SDL_Quit();
     return 0;
 }
