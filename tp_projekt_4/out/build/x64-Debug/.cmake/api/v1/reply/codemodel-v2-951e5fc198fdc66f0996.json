@@ -241,7 +241,11 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "planar_quadrotor::@6890427a1f51a3e7e1df",
+<<<<<<<< HEAD:tp_projekt_4/out/build/x64-Debug/.cmake/api/v1/reply/codemodel-v2-951e5fc198fdc66f0996.json
+					"jsonFile" : "target-planar_quadrotor-Debug-9ee393df2b802962a493.json",
+========
 					"jsonFile" : "target-planar_quadrotor-Debug-13bc99e12a1f23887eae.json",
+>>>>>>>> 85051e2bd61436d767749ee81ba6205f0ff42eda:tp_projekt_4/out/build/x64-Debug/.cmake/api/v1/reply/codemodel-v2-aa50b3b34d9c2830ce32.json
 					"name" : "planar_quadrotor",
 					"projectIndex" : 0
 				},
