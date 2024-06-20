@@ -8,7 +8,7 @@
 namespace mp = matplot;
 
 const int base_freq = 44100;
-const int chunk_size = 1024;
+const int chunk_size = 2048;
 const int wzmocnienie = 1;
 
 //dzwiek
@@ -20,9 +20,9 @@ void dzwiek(Uint8* bufor, double freq_dzwieku, double theta)
     for (int i = 0; i < chunk_size; i++)
     {
         time = i / base_freq;
-        current_value = wzmocnienie * sin(time* 2 * M_PI * freq_dzwieku);
+        current_value = wzmocnienie * sin(time * 2 * M_PI * freq_dzwieku);
 
-        bufor[i] = (Uint8)(current_value + wzmocnienie * 2 + theta * 2 * wzmocnienie); //theta
+        bufor[i] = (Uint8)((current_value+wzmocnienie)*theta);
     }
 }
 
@@ -77,7 +77,7 @@ int main(int argc, char* args[])
     specyfikacja.callback = NULL;
     specyfikacja.userdata = NULL;
 
-    double freq_dzwieku = 100;
+    double freq_dzwieku = 50;
 
     SDL_AudioDeviceID urzadzenie_dzwiekowe = SDL_OpenAudioDevice(NULL, 0, &specyfikacja, NULL, 0);
     if (urzadzenie_dzwiekowe == 0) {
@@ -110,7 +110,7 @@ int main(int argc, char* args[])
     quadrotor.SetGoal(goal_state);
 
     /* Timestep for the simulation */
-    const float dt = 0.1; //odpowiada za czas; 0.005 - ostatecznie; 0.1 - szybkie tempo do testów
+    const float dt = 0.01; //odpowiada za czas; 0.005 - ostatecznie; 0.1 - szybkie tempo do testów
     quadrotor.DoUpdateState(dt);
 
     Eigen::MatrixXf K = LQR(quadrotor, dt);
