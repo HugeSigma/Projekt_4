@@ -74,6 +74,8 @@ void PlanarQuadrotorVisualizer::render(std::shared_ptr<SDL_Renderer> &gRenderer)
     int y1 = Dron_G2;
     int y2 = Dron_D2;
 
+    SDL_SetRenderDrawBlendMode(gRenderer.get(), SDL_BLENDMODE_BLEND);
+
     SDL_SetRenderDrawColor(gRenderer.get(), 0xFF, 0x00, 0x00, 0x00);
 
     SDL_RenderFillRect(gRenderer.get(), &quadrotorKorpus);
