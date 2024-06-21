@@ -4,10 +4,11 @@
 #include "simulate.h"
 #include "matplot/matplot.h"
 #include "SDL.h"
+#include "thread"
 
 namespace mp = matplot;
 
-const int base_freq = 44100;
+const int base_freq = 54100;
 const int chunk_size = 2048;
 const int wzmocnienie = 1;
 
@@ -24,6 +25,27 @@ void dzwiek(Uint8* bufor, double freq_dzwieku, double theta)
 
         bufor[i] = (Uint8)((current_value+wzmocnienie)*theta);
     }
+}
+
+void plot(std::vector<float> x_history, std::vector<float> y_history, std::vector<float> theta_history, std::vector<float> time)
+{
+    mp::tiledlayout(3, 1);
+    auto w1 = mp::nexttile();
+    mp::plot(w1, time, x_history);
+    mp::ylabel(w1, "x");
+    mp::xlabel(w1, "t");
+
+    auto w2 = mp::nexttile();
+    mp::plot(w2, time, y_history);
+    mp::ylabel(w2, "y");
+    mp::xlabel(w2, "t");
+
+    auto w3 = mp::nexttile();
+    mp::plot(w3, time, theta_history);
+    mp::ylabel(w3, "theta");
+    mp::xlabel(w3, "t");
+
+    mp::show();
 }
 
 Eigen::MatrixXf LQR(PlanarQuadrotor &quadrotor, float dt) {
@@ -70,7 +92,7 @@ int main(int argc, char* args[])
     }
 
     SDL_AudioSpec specyfikacja;
-    specyfikacja.freq = 54100;
+    specyfikacja.freq = base_freq;
     specyfikacja.format = AUDIO_U8;
     specyfikacja.channels = 2;
     specyfikacja.samples = chunk_size;
@@ -110,7 +132,7 @@ int main(int argc, char* args[])
     quadrotor.SetGoal(goal_state);
 
     /* Timestep for the simulation */
-    const float dt = 0.01; //odpowiada za czas; 0.005 - ostatecznie; 0.1 - szybkie tempo do testów
+    const float dt = 0.01; //odpowiada za czas; 0.01 - ostatecznie; 0.1 - szybkie tempo do testów
     quadrotor.DoUpdateState(dt);
 
     Eigen::MatrixXf K = LQR(quadrotor, dt);
@@ -161,23 +183,8 @@ int main(int argc, char* args[])
                 }
                 else if (e.type == SDL_KEYDOWN && e.key.keysym.sym == SDLK_p)
                 {
-                    mp::tiledlayout(3, 1);
-                    auto w1 = mp::nexttile();
-                    mp::plot(w1, time, x_history);
-                    mp::ylabel(w1, "x");
-                    mp::xlabel(w1, "t");
-
-                    auto w2 = mp::nexttile();
-                    mp::plot(w2, time, y_history);
-                    mp::ylabel(w2, "y");
-                    mp::xlabel(w2, "t");
-
-                    auto w3 = mp::nexttile();
-                    mp::plot(w3, time, theta_history);
-                    mp::ylabel(w3, "theta");
-                    mp::xlabel(w3, "t");
-
-                    mp::show();
+                    std::thread f_plot(plot, x_history, y_history, theta_history, time);
+                    f_plot.detach();
                 }
                 
             }
